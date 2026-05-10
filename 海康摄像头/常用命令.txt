@@ -1,0 +1,15 @@
+32位注册
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe "C:\Program Files (x86)\Siemens\WinCC\bin\Wsm_CameraControlPanel.dll" /tlb /codebase
+
+64位注册
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe "C:\Program Files (x86)\Siemens\WinCC\bin\Wsm_CameraControlPanel.dll" /tlb /codebase
+
+
+powershell运行时检查
+powershell -command "& {
+  Add-Type -Path 'C:\Program Files (x86)\Siemens\WinCC\bin\Wsm_CameraControlPanel.dll'
+}"
+
+卸载注册（32位和64位）
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe "C:\Program Files (x86)\Siemens\WinCC\bin\Wsm_CameraControlPanel.dll" /unregister
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe "C:\Program Files (x86)\Siemens\WinCC\bin\Wsm_CameraControlPanel.dll" /unregister
